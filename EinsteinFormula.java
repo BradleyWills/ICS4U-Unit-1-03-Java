@@ -16,26 +16,28 @@ public class EinsteinFormula {
   static double energy;
   
   /**
-   * Calculates and outputs the amount of potential energy given the mass.
-   */
-   
+  * Calculates and outputs the amount of potential energy given the mass.
+  */
+  
   public static void main(String[] args) {
     // Create scanner also found at https://www.programiz.com/java-programming/basic-input-output
     Scanner userInput = new Scanner(System.in);
     // Ask for input
     System.out.println("Input the mass:");
     // Assign user input as mass
-    try { mass = userInput.nextDouble(); 
+    try { 
+      mass = userInput.nextDouble(); 
       if (mass >= 0) {
-      // Calculate the potential energy
-      energy =  mass *  Math.pow(2.988 * Math.pow(10,8),2);
-      // Tells the user the potential energy and restates the mass
-      System.out.println("The potential energy of an object with a mass of " + mass + " is " + energy + " joules.");
+        // Calculate the potential energy
+        energy =  mass *  Math.pow(2.988 * Math.pow(10,8),2);
+        // Tells the user the potential energy and restates the mass
+        System.out.println("The potential energy of an object with a mass of " + mass + " is " 
+            + energy + " joules.");
       } else {
-      // Informs user their input is invalid
-      System.out.println("Invalid Input");
+        // Informs user their input is invalid
+        System.out.println("Invalid Input");
       }
-    } catch(Exception e) {
+    } catch (Exception e) {
       // Informs user their input is invalid
       System.out.println("Invalid Input");
     }
