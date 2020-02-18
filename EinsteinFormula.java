@@ -28,7 +28,7 @@ public class EinsteinFormula {
     try { mass = userInput.nextDouble(); 
       if (mass >= 0) {
       // Calculate the potential energy
-      energy =  mass *  Math.pow(2.998,2);
+      energy =  mass *  Math.pow(2.988 * Math.pow(10,8),2);
       // Tells the user the potential energy and restates the mass
       System.out.println("The potential energy of an object with a mass of " + mass + " is " + energy + " joules.");
       } else {
@@ -37,7 +37,7 @@ public class EinsteinFormula {
       }
     } catch(Exception e) {
       // Informs user their input is invalid
-      System.err.println("Invalid Input");
+      System.out.println("Invalid Input");
     }
   }
 }
